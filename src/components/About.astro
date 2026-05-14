@@ -9,18 +9,11 @@
       <div class="about-photo-col reveal">
         <div class="about-photo-wrap">
           <img
-            src="/victor-gallardo.jpg"
-            alt="Víctor Gallardo, Kinesiólogo Integral — Universidad de Chile"
+            src="/victor-gallardo.png"
+            alt="Víctor Gallardo P., Kinesiólogo Integral — Universidad de Chile"
             class="about-photo"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
           />
-          <div class="about-photo-placeholder" style="display:none;">
-            <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="40" cy="26" r="14"/>
-              <path d="M12 72c0-15.464 12.536-28 28-28s28 12.536 28 28"/>
-            </svg>
-            <span>Víctor Gallardo P.</span>
-          </div>
+
 
           <!-- University badge -->
           <div class="about-badge">
@@ -101,23 +94,12 @@
   .about-photo-wrap { position: relative; width: 100%; max-width: 380px; }
 
   .about-photo {
-    width: 100%; aspect-ratio: 3/4;
-    object-fit: cover; object-position: top;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-height: 560px;
+    object-fit: contain;
+    object-position: bottom center;
+    filter: drop-shadow(0 16px 32px rgba(15,52,96,0.15));
   }
-
-  .about-photo-placeholder {
-    width: 100%; aspect-ratio: 3/4;
-    background: linear-gradient(160deg, var(--color-blue-100), var(--color-blue-50));
-    border-radius: var(--radius-lg);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 1rem; color: var(--color-blue-400);
-    border: 2px dashed var(--color-blue-200);
-  }
-  .about-photo-placeholder svg { width: 70px; height: 70px; }
-  .about-photo-placeholder span { font-size: 0.9rem; color: var(--color-gray-500); }
 
   .about-badge {
     position: absolute;

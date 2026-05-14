@@ -1,0 +1,156 @@
+---
+const experiences = [
+  {
+    period: '1983 – Presente',
+    role: 'Kinesiólogo Independiente · Práctica Clínica',
+    place: 'Santiago, Chile',
+    description: 'Práctica clínica independiente con atención integral a pacientes en las áreas musculoesquelética, deportiva y kinesiología estética. Atención en el sector oriente de Santiago con un enfoque profundamente personalizado.',
+    icon: 'clinic',
+    featured: false,
+  },
+  {
+    period: '~1990 – 2005 · 15 años',
+    role: 'Kinesiólogo Jefe — Centro de Ski Valle Nevado',
+    place: 'Valle Nevado, Región Metropolitana',
+    description: 'Durante 15 años lideré el equipo kinésico del prestigioso Centro de Ski Valle Nevado, uno de los resorts de nieve más importantes de Sudamérica. Atendí a deportistas profesionales y amateurs, turistas y aficionados de la nieve, coordinando protocolos de rehabilitación en situaciones de alta exigencia y en condiciones extremas de montaña. Una experiencia única que forjó mi visión de la kinesiología deportiva.',
+    icon: 'snow',
+    featured: true,
+  },
+  {
+    period: 'Posterior',
+    role: 'Soporte Técnico — Centro Estética Carolina Varela',
+    place: 'Santiago, Chile',
+    description: 'Trabajé en el reconocido Centro de Estética Carolina Varela, uno de los referentes de salud estética de más alto estándar en Chile. Me encargué del soporte y manejo técnico de los equipos profesionales de kinesiología utilizados en tratamientos estéticos de vanguardia, acumulando un profundo conocimiento en tecnología de última generación.',
+    icon: 'spa',
+    featured: true,
+  },
+];
+---
+
+<section id="experiencia" class="experience">
+  <div class="container">
+    <div class="exp-header reveal">
+      <span class="section-label">Trayectoria</span>
+      <h2 class="section-title">Historia de excelencia<br/>y dedicación profesional</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">
+        Más de cuatro décadas construyendo experiencia en escenarios de alta exigencia, desde las cimas nevadas de los Andes hasta los centros de salud estética más reconocidos de Santiago.
+      </p>
+    </div>
+
+    <div class="timeline">
+      {experiences.map((exp, i) => (
+        <div class={`tl-item reveal ${exp.featured ? 'tl-item--featured' : ''}`} style={`transition-delay:${i*0.12}s`}>
+          <div class="tl-dot">
+            {exp.icon === 'clinic' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            )}
+            {exp.icon === 'snow' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18M5.636 5.636l12.728 12.728M18.364 5.636L5.636 18.364"/>
+              </svg>
+            )}
+            {exp.icon === 'spa' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+              </svg>
+            )}
+          </div>
+
+          <div class="tl-card card">
+            <div class="tl-period">{exp.period}</div>
+            <h3 class="tl-role">{exp.role}</h3>
+            <div class="tl-place">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0zM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/>
+              </svg>
+              {exp.place}
+            </div>
+            <p class="tl-desc">{exp.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience { background: var(--color-white); }
+  .exp-header { margin-bottom: 3.5rem; }
+
+  .timeline {
+    position: relative;
+    display: flex; flex-direction: column; gap: 2rem;
+    padding-left: 1rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 26px; top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-blue-300), transparent);
+    border-radius: 2px;
+  }
+
+  .tl-item { display: flex; gap: 2rem; align-items: flex-start; }
+
+  .tl-dot {
+    width: 54px; height: 54px; flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--color-white);
+    border: 2px solid var(--color-blue-300);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--color-blue-500);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .tl-item--featured .tl-dot {
+    background: linear-gradient(135deg, var(--color-blue-700), var(--color-blue-500));
+    border-color: var(--color-blue-700);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(25,118,210,0.3);
+  }
+
+  .tl-dot svg { width: 22px; height: 22px; }
+
+  .tl-card {
+    flex: 1; padding: 1.75rem 2rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .tl-item--featured .tl-card {
+    border-color: rgba(25,118,210,0.2);
+    background: linear-gradient(160deg, var(--color-blue-50) 0%, var(--color-white) 100%);
+  }
+
+  .tl-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+  .tl-period {
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.12em; color: var(--color-accent);
+    margin-bottom: 0.4rem;
+  }
+
+  .tl-role { font-size: 1.05rem; font-weight: 700; color: var(--color-blue-900); margin-bottom: 0.3rem; }
+
+  .tl-place {
+    display: flex; align-items: center; gap: 0.3rem;
+    font-size: 0.8rem; color: var(--color-gray-400); margin-bottom: 0.9rem;
+  }
+  .tl-place svg { color: var(--color-accent); flex-shrink: 0; }
+
+  .tl-desc { font-size: 0.93rem; color: var(--color-gray-600); line-height: 1.75; }
+
+  @media (max-width: 600px) {
+    .timeline::before { left: 18px; }
+    .tl-dot { width: 38px; height: 38px; }
+    .tl-dot svg { width: 16px; height: 16px; }
+    .tl-item { gap: 1.25rem; }
+    .tl-card { padding: 1.25rem; }
+  }
+</style>

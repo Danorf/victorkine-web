@@ -1,0 +1,234 @@
+---
+const WA_NUMBER = '56981862444';
+const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Hola%20Víctor%2C%20quisiera%20agendar%20una%20consulta%20kinesiológica.`;
+const EMAIL = 'victor.gallardo@spaequipos.cl';
+const INSTAGRAM = 'https://www.instagram.com/victorkine_integral/';
+---
+
+<section id="contacto" class="contact bg-gray">
+  <div class="container">
+    <div class="contact-inner">
+      <!-- Left: info -->
+      <div class="contact-left reveal">
+        <span class="section-label">Contacto</span>
+        <h2 class="section-title">¿Tienes alguna consulta?<br/>Escríbeme directamente</h2>
+        <div class="divider"></div>
+        <p class="contact-body">
+          La forma más rápida y directa de consultarme es por <strong>WhatsApp</strong>.
+          Respondo personalmente para escucharte, orientarte y coordinar tu evaluación.
+        </p>
+
+        <div class="contact-methods">
+          <!-- WhatsApp -->
+          <a href={WA_LINK} target="_blank" rel="noopener" class="contact-method contact-method--wa" id="cta-wa-contact">
+            <div class="cm-icon cm-icon--wa">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="cm-body">
+              <span class="cm-label">WhatsApp — Recomendado</span>
+              <span class="cm-value">+56 9 8186 2444</span>
+            </div>
+            <div class="cm-arrow">→</div>
+          </a>
+
+          <!-- Email -->
+          <a href={`mailto:${EMAIL}`} class="contact-method" id="cta-email-contact">
+            <div class="cm-icon cm-icon--email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+              </svg>
+            </div>
+            <div class="cm-body">
+              <span class="cm-label">Correo electrónico</span>
+              <span class="cm-value">{EMAIL}</span>
+            </div>
+          </a>
+
+          <!-- Instagram -->
+          <a href={INSTAGRAM} target="_blank" rel="noopener" class="contact-method" id="cta-ig-contact">
+            <div class="cm-icon cm-icon--ig">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+            <div class="cm-body">
+              <span class="cm-label">Instagram</span>
+              <span class="cm-value">@victorkine_integral</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: WA preview card -->
+      <div class="contact-right reveal" style="transition-delay:0.12s">
+        <div class="wa-preview-card">
+          <div class="wap-header">
+            <div class="wap-avatar">VG</div>
+            <div class="wap-info">
+              <span class="wap-name">Víctor Gallardo · Kinesiólogo</span>
+              <span class="wap-status">
+                <span class="wap-dot"></span>
+                En línea
+              </span>
+            </div>
+            <div class="wap-wa-logo">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+          </div>
+          <div class="wap-chat">
+            <div class="wap-bubble wap-bubble--in">
+              Hola Víctor, tengo dolor de rodilla hace semanas... ¿Podría atenderme?
+            </div>
+            <div class="wap-bubble wap-bubble--out">
+              ¡Hola! Claro, con mucho gusto. ¿Cuándo tienes disponibilidad para una evaluación?
+              <span class="wap-check">✓✓</span>
+            </div>
+            <div class="wap-bubble wap-bubble--in">
+              Esta semana, martes o jueves en Las Condes
+            </div>
+            <div class="wap-bubble wap-bubble--out">
+              Perfecto, el jueves tengo espacio en KinesicWork, Av. Larraín 6642 Of.214 📍
+              <span class="wap-check">✓✓</span>
+            </div>
+          </div>
+          <a href={WA_LINK} target="_blank" rel="noopener" class="wap-cta" id="cta-wa-preview">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Escribir a Víctor ahora
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact { padding-bottom: 6rem; }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contact-body {
+    font-size: 1rem; color: var(--color-gray-600);
+    line-height: 1.78; margin-bottom: 2rem;
+  }
+  .contact-body strong { color: var(--color-blue-900); }
+
+  .contact-methods { display: flex; flex-direction: column; gap: 0.85rem; }
+
+  .contact-method {
+    display: flex; align-items: center; gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius);
+    border: 1.5px solid var(--color-gray-200);
+    background: var(--color-white);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .contact-method:hover {
+    border-color: var(--color-blue-300);
+    box-shadow: var(--shadow-sm);
+    transform: translateX(3px);
+  }
+  .contact-method--wa {
+    border-color: rgba(37,211,102,0.3);
+    background: rgba(37,211,102,0.04);
+  }
+  .contact-method--wa:hover {
+    border-color: rgba(37,211,102,0.5);
+    background: rgba(37,211,102,0.07);
+  }
+
+  .cm-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .cm-icon--wa { background: linear-gradient(135deg, #25d366, #128c7e); color: #fff; }
+  .cm-icon--email { background: var(--color-blue-50); color: var(--color-blue-700); }
+  .cm-icon--ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; }
+  .cm-icon svg { width: 20px; height: 20px; }
+
+  .cm-body { display: flex; flex-direction: column; gap: 0.1rem; flex: 1; }
+  .cm-label { font-size: 0.7rem; font-weight: 600; color: var(--color-gray-400); text-transform: uppercase; letter-spacing: 0.08em; }
+  .cm-value { font-size: 0.92rem; font-weight: 700; color: var(--color-blue-900); }
+
+  .cm-arrow { font-size: 1rem; color: var(--color-gray-400); transition: transform 0.2s; }
+  .contact-method:hover .cm-arrow { transform: translateX(4px); color: var(--color-accent); }
+
+  /* WA Preview */
+  .wa-preview-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-gray-200);
+  }
+
+  .wap-header {
+    background: var(--color-blue-900);
+    padding: 1rem 1.25rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+
+  .wap-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-blue-500), var(--color-blue-700));
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 0.85rem; color: #fff; flex-shrink: 0;
+  }
+
+  .wap-info { display: flex; flex-direction: column; gap: 0.1rem; flex: 1; }
+  .wap-name { font-size: 0.88rem; font-weight: 700; color: #fff; }
+  .wap-status { display: flex; align-items: center; gap: 0.35rem; font-size: 0.72rem; color: rgba(255,255,255,0.6); }
+  .wap-dot { width: 6px; height: 6px; border-radius: 50%; background: #25d366; animation: blink 1.5s infinite; }
+
+  .wap-wa-logo { color: #25d366; }
+  .wap-wa-logo svg { width: 20px; height: 20px; }
+
+  .wap-chat {
+    background: #ece5dd;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c7bdb4' fill-opacity='0.25'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    padding: 1.25rem;
+    display: flex; flex-direction: column; gap: 0.6rem;
+    min-height: 220px;
+  }
+
+  .wap-bubble {
+    max-width: 82%; padding: 0.6rem 0.9rem;
+    border-radius: 12px; font-size: 0.83rem; line-height: 1.5;
+    position: relative;
+  }
+  .wap-bubble--in {
+    background: #fff; color: #333;
+    border-bottom-left-radius: 3px; align-self: flex-start;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  }
+  .wap-bubble--out {
+    background: #dcf8c6; color: #111;
+    border-bottom-right-radius: 3px; align-self: flex-end;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  }
+  .wap-check { font-size: 0.65rem; color: #53bdeb; margin-left: 0.35rem; }
+
+  .wap-cta {
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    padding: 1rem; width: 100%;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #fff; font-weight: 700; font-size: 0.9rem;
+    border: none; cursor: pointer; transition: opacity 0.2s;
+    text-decoration: none;
+  }
+  .wap-cta:hover { opacity: 0.9; }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  @media (max-width: 900px) {
+    .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+</style>

@@ -1,0 +1,289 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Víctor Gallardo — Kinesiólogo Integral | spaequipos.cl',
+  description = 'Kinesiólogo con más de 40 años de experiencia. Especialista en kinesiología musculoesquelética, estética y deportiva. Atención en Las Condes, La Reina, Vitacura, Providencia y Ñuñoa. Consulta por WhatsApp.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Víctor Gallardo" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://spaequipos.cl/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://spaequipos.cl/" />
+    <meta property="og:locale" content="es_CL" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    /* Clinical white & blue palette */
+    --color-blue-900: #0a2540;
+    --color-blue-800: #0f3460;
+    --color-blue-700: #1565c0;
+    --color-blue-600: #1976d2;
+    --color-blue-500: #2196f3;
+    --color-blue-400: #42a5f5;
+    --color-blue-100: #e3f2fd;
+    --color-blue-50:  #f0f8ff;
+
+    --color-white:   #ffffff;
+    --color-gray-50: #f8fafc;
+    --color-gray-100: #f1f5f9;
+    --color-gray-200: #e2e8f0;
+    --color-gray-400: #94a3b8;
+    --color-gray-600: #475569;
+    --color-gray-800: #1e293b;
+    --color-gray-900: #0f172a;
+
+    --color-accent:  #1976d2;
+    --color-accent-light: #42a5f5;
+    --color-accent-dark:  #0f3460;
+
+    /* WA green */
+    --wa-green: #25d366;
+    --wa-dark:  #128c7e;
+
+    --font-sans: 'Outfit', sans-serif;
+    --font-serif: 'Lora', serif;
+
+    --radius: 12px;
+    --radius-lg: 20px;
+    --shadow-sm: 0 2px 8px rgba(15,52,96,0.08);
+    --shadow: 0 8px 32px rgba(15,52,96,0.12);
+    --shadow-lg: 0 20px 60px rgba(15,52,96,0.18);
+    --shadow-glow: 0 0 40px rgba(25,118,210,0.2);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-white);
+    color: var(--color-gray-800);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--color-blue-900);
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  section { padding: 5rem 1.5rem; }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 0.65rem;
+    display: block;
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: 1.25rem;
+    color: var(--color-blue-900);
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--color-gray-600);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 52px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-blue-700), var(--color-blue-400));
+    border-radius: 2px;
+    margin: 0.85rem 0 1.75rem;
+  }
+
+  /* --- WhatsApp button --- */
+  .btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, var(--wa-green), var(--wa-dark));
+    color: #fff;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn-wa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(37,211,102,0.45);
+  }
+  .btn-wa svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+  /* --- Outline button --- */
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: transparent;
+    color: var(--color-blue-900);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 50px;
+    border: 2px solid var(--color-blue-700);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+  .btn-outline:hover {
+    background: var(--color-blue-700);
+    color: #fff;
+  }
+
+  /* --- Primary blue button --- */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, var(--color-blue-700), var(--color-blue-600));
+    color: #fff;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 20px rgba(25,118,210,0.3);
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(25,118,210,0.4);
+  }
+
+  /* --- Floating WhatsApp --- */
+  .float-wa {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--wa-green), var(--wa-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: pulse-wa 2.5s infinite;
+    text-decoration: none;
+  }
+  .float-wa:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 36px rgba(37,211,102,0.55);
+    animation: none;
+  }
+  .float-wa svg { width: 30px; height: 30px; fill: #fff; }
+
+  @keyframes pulse-wa {
+    0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
+    50%       { box-shadow: 0 6px 40px rgba(37,211,102,0.7); }
+  }
+
+  /* --- Card base --- */
+  .card {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+  }
+
+  /* --- Reveal animation --- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* --- Background helpers --- */
+  .bg-white   { background: var(--color-white); }
+  .bg-gray    { background: var(--color-gray-50); }
+  .bg-blue    { background: var(--color-blue-900); }
+  .bg-blue-light { background: var(--color-blue-50); }
+
+  @media (max-width: 768px) {
+    section { padding: 3.5rem 1.25rem; }
+    .float-wa { bottom: 1.5rem; right: 1.5rem; width: 54px; height: 54px; }
+    .float-wa svg { width: 26px; height: 26px; }
+  }
+</style>

@@ -1,9 +1,0 @@
-# Cloudflare Pages build configuration
-# https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/
-
-[build]
-  command = "npm run build"
-  destination = "dist"
-
-[build.environment]
-  NODE_VERSION = "20"

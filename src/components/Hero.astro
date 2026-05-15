@@ -155,11 +155,11 @@ const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Hola%20Víctor%2C%20quisiera%20
 
   .hero-inner {
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr 460px;
     gap: 3rem;
-    align-items: center;
+    align-items: flex-end;
     padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 0;
     position: relative;
     z-index: 1;
   }
@@ -245,11 +245,12 @@ const WA_LINK = `https://wa.me/${WA_NUMBER}?text=Hola%20Víctor%2C%20quisiera%20
 
   .hero-photo {
     width: 100%;
-    max-height: 600px;
+    max-height: 680px;
     object-fit: contain;
     object-position: bottom center;
+    display: block;
     /* drop-shadow preserves transparent PNG edges */
-    filter: drop-shadow(0 20px 40px rgba(15, 52, 96, 0.18));
+    filter: drop-shadow(0 0px 30px rgba(15, 52, 96, 0.15));
   }
 
   .hero-cred {

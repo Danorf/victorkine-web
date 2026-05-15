@@ -71,6 +71,11 @@ const PARTICULAR_WA = `https://wa.me/${WA_NUMBER}?text=Hola%20Víctor%2C%20quier
           </svg>
         </div>
         <h3 class="loc-name">Atención Particular</h3>
+        <!-- FONASA badge -->
+        <div class="fonasa-badge">
+          <img src="/fonasa-logo.jpg" alt="Acepta FONASA" class="fonasa-badge-logo" />
+          <span>Atención con FONASA</span>
+        </div>
         <div class="loc-address">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0zM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 0115 0z"/>
@@ -205,6 +210,29 @@ const PARTICULAR_WA = `https://wa.me/${WA_NUMBER}?text=Hola%20Víctor%2C%20quier
     text-decoration: none; transition: color 0.2s;
   }
   .loc-web:hover { color: var(--color-blue-900); }
+
+  /* FONASA badge in location card */
+  .fonasa-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: var(--radius);
+    padding: 0.55rem 0.9rem;
+    width: fit-content;
+  }
+  .fonasa-badge-logo {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+  .fonasa-badge span {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0369a1;
+    white-space: nowrap;
+  }
 
   /* Comunas strip – spans full width */
   .comunas-strip {
